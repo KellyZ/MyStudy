@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+html {
+    font: 12px '';
+}
+
+.top {
+    height: 26px;
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.top_page {
+    width: 970px;
+    height: 26px;
+    margin: 0 auto;
+}
+
+.top_page_l {
+    line-height: 26px;
+}
+
+.top_page_r {}
+
+.top_page_r ul li {
+    float: left;
+    margin-left: 10px;
+    line-height: 26px;
+}
+
+/* logo部分*/
+.logo {
+    width: 970px;
+    height: 98px;
+    margin: 0 auto;
+}
+
+.logo_l {
+    width: 200px;
+    height: 55px;
+    margin: 24px 0 19px 9px;
+    background: #00ff00;
+    text-indent: -1000px;
+}
+
+.logo_r {
+    width: 530px;
+    height: 42px;
+    margin-top: 29px;
+    border: 1px solid #C9C9C9;
+}
+
+.logo_r_content {
+    margin: 5px 5px 5px 4px;
+}
+
+.logo_r_search {
+    width: 420px;
+    height: 28px;
+    border: 1px solid #C9C9C9;
+}
+
+.logo_r_btn {
+    width: 99px;
+    height: 30px;
+    background: #2F70D0;
+    color: white;
+}
+
+/*导航区域*/
+.nav {
+    width: 970px;
+    height: 25px;
+    margin: 0 auto;
+    border-bottom: 2px solid #2F70D0;
+}
+
+.nav ul li {
+    float: left;
+    line-height: 25px;
+    padding: 0 15px 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav ul li a {
+    color: #2F70D0;
+}
+
+.nav ul li:hover {
+    background-color: #2F70D0;
+
+}
+
+.nav ul li:hover a {
+    color: white;
+}
+
+/*二级导航区域*/
+.banner {
+    width: 970px;
+    height: 210px;
+    margin: 0 auto;
+    margin-top: 4px;
+}
+
+.subNav {
+    width: 200px;
+    height: 210px;
+}
+
+.ad {
+    width: 520px;
+    height: 210px;
+    margin-left: 10px;
+    background: aliceblue;
+}
+
+.message {
+    width: 230px;
+    height: 210px;
+}
+
+.subNav h2 {
+    padding-left: 20px;
+    line-height: 30px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #2F70D0;
+    color: white;
+}
+
+.subNav ul {
+    background-color: #E8F0F6;
+    height: 180px;
+}
+
+.subNav li {
+    font-size: 14px;
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+.subNav li a{
+    padding-left: 20px;
+}
+
+.message_top {
+    height: 95px;
+    border: 1px solid #DDDDDD;
+    background: #F7FAFF;
+}
+
+.message_bottom {
+    height: 92px;
+    background: #F7F7F7;
+    margin-top: 21px;
+}
+
