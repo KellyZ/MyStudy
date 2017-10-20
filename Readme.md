@@ -36,6 +36,22 @@ https://github.com/yui/yui3/blob/master/src/cssreset/css/cssreset.css
 - css flex
 - css mixin
 - css media query
+- css rem
 
+
+## AxureRP
+
+- 参考网站：http://www.axureux.com
+- 移动端原型尺寸
+
+```
+    iPhone4 320*480
+    
+    iPhone5  320*568
+    
+    iPhone6  375*667
+    
+    iPhone 6 Plus 414*736
+```
 
 
