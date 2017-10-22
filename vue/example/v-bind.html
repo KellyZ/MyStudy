@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-bind实例</title>
+</head>
+<body>
+    <h1>v-bind实例</h1>
+    <hr>
+    <div id="app">
+        <img v-bind:src="bimg" alt=""><br>
+        <a :href="vueSite" target="_blank">vue.js官网</a>
+        <hr>
+        <h3>绑定class</h3>
+        <input type="checkbox" v-model="isOK">
+        <div :class="className">绑定class的状态</div>
+        <div :class="{classA:isOK}">绑定class的状态</div>
+        <div :class="[classA,classB]">绑定class的状态</div>
+        <div :class="isOK?classA:classB">绑定class的状态</div>
+    </div>
+
+    <style>
+        .classA {
+            color: red;
+        }
+        .classB {
+            font-size: 150%;
+        }
+    </style>
+
+    <script src="../assets/js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el:'#app',
+            data: {
+                bimg:'https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=645e0c4bc41b9d1695c79c61c3dfb4eb/bba1cd11728b4710ab8a6358c9cec3fdfd0323f8.jpg',
+                vueSite:'https://cn.vuejs.org',
+                isOK:false,
+                classA:'classA',
+                classB:'classB'
+            },
+            computed:{
+                className:function () {
+                    return (this.isOK?'classA':'classB');
+                }
+            }
+        })
+    </script>
+</body>
+</html>

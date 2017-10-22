@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue component 3</title>
+</head>
+<body>
+<h1>vue component 3</h1>
+<hr>
+
+<div id="app">
+    <myname :sex="parentSex"></myname>
+</div>
+
+
+<script src="../assets/js/vue.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    var city = {
+        template:`<div>这时子组件,city is {{city}}</div>`,
+        props:['city']
+    }
+
+    var myname = {
+        template:`<div>我是局部组件,sex is {{sex}},from city <city :city="city"></city></div>`,
+        props:['sex'],
+        data:function () {
+            return {
+                city:'hunan'
+            }
+        },
+        components:{
+            "city":city
+        }
+    }
+
+    var app = new Vue({
+        el:'#app',
+        data:{
+          parentSex:'woman'
+        },
+        components:{
+            myname:myname
+        }
+    })
+</script>
+</body>
+</html>

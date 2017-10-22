@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>instance event</title>
+</head>
+<body>
+    <h1>instance event</h1>
+    <hr>
+    <div id="app">
+        <p>number:<span v-text="number"></span></p>
+        <button @click="add">加1</button>
+        <button onclick="minus()">减1</button>
+        <button onclick="offminus()">关闭减事件</button>
+    </div>
+
+
+    <script src="../assets/js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el:'#app',
+            data:{
+                number:0
+            },
+            methods:{
+                add:function () {
+                    this.number++;
+                }
+            }
+        })
+
+        app.$on('minus',function () {
+            this.number--;
+        })
+
+        function minus() {
+            app.$emit('minus')
+        }
+
+        function offminus() {
+            app.$off('minus')
+        }
+
+    </script>
+</body>
+</html>

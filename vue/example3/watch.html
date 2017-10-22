@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>watch实例</title>
+</head>
+<body>
+    <h1>watch实例</h1>
+    <hr>
+    <div id="app">
+        <p>今日温度：<span v-text="temp"></span></p>
+        <p>穿衣建议：<span v-text="yifu"></span></p>
+        <p><button @click="addTemp(5)">增加温度</button>
+            <button @click="minusTemp(5)">减低温度</button></p>
+    </div>
+
+
+    <script src="../assets/js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function mywatch(newVal,oldVal) {
+            if (newVal>36){
+                this.yifu = '建议穿衬衣'
+            }else if (newVal>26){
+                this.yifu = '建议穿夹克'
+            }else if (newVal<0){
+                this.yifu = '建议穿毛衣'
+            }else{
+                this.yifu = '建议穿秋衣'
+            }
+        }
+
+        var app = new Vue({
+            el:'#app',
+            data:{
+                temp:22,
+                yifu:'建议穿皮衣'
+            },
+            methods:{
+                addTemp:function (num) {
+                    this.temp = this.temp+parseInt(num)
+                },
+                minusTemp:function (num) {
+                    this.temp = this.temp-parseInt(num)
+                }
+            },
+//            watch:{
+//                temp:mywatch
+//            }
+        })
+
+        app.$watch('temp',mywatch)
+    </script>
+</body>
+</html>

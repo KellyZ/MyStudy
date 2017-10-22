@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>instance method</title>
+</head>
+<body>
+    <h1>instance method</h1>
+    <hr>
+    <div id="app"></div>
+    <div><button onclick="destroyApp()">销毁</button></div>
+    <div><button onclick="reload()">reload</button></div>
+
+    <script src="../assets/js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var myname = Vue.extend({
+            template: `<div>{{name}}</div>`,
+            data:function() {
+                return {
+                    name:'kelly'
+                }
+            },
+            updated:function() {
+                console.log("updated")
+            },
+            destroyed:function () {
+                console.log("destroyed")
+            }
+        });
+
+        var app = new myname().$mount('#app');
+
+        function destroyApp() {
+            app.$destroy();
+        }
+
+        function reload() {
+            app.$forceUpdate();
+        }
+
+    </script>
+</body>
+</html>

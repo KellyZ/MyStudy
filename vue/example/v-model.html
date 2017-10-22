@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-model实例</title>
+</head>
+<body>
+    <h1>v-model实例</h1>
+    <hr>
+    <div id="app">
+        <p>字符 v-model.lazy.trim</p>
+        <p v-text="message"></p>
+        <input type="text" v-model.lazy.trim="message">
+
+        <p>数字 v-model.lazy.number</p>
+        <p v-text="number"></p>
+        <input type="number" v-model.number="number">
+
+        <hr>
+        <h3>文本域</h3>
+        <textarea name="test" id="test" cols="30" rows="10" v-model="message"></textarea>
+
+        <hr>
+        <h3>多选框绑定一个值</h3>
+        <input type="checkbox" id="isTrue" v-model="isTrue">
+        <label for="isTrue" v-text="isTrue"></label>
+        <br>
+        <input type="checkbox" id="java" value="java" v-model="techs">
+        <label for="java">java</label>
+        <input type="checkbox" id="cpp" value="cpp" v-model="techs">
+        <label for="cpp">cpp</label>
+        <input type="checkbox" id="python" value="python" v-model="techs">
+        <label for="python">python</label>
+
+        选择的结果是：<p v-text="techs"></p>
+
+        <hr>
+        <h3>单选框的绑定一个值</h3>
+        你的性别是：<br>
+        <input type="radio" id="man" value="男" v-model="sex">
+        <label for="man">男</label><br>
+        <input type="radio" id="woman" value="女" v-model="sex">
+        <label for="woman">女</label><br>
+        选择的结果是: <p v-text="sex"></p>
+    </div>
+
+
+    <script src="../assets/js/vue.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el:'#app',
+            data: {
+                message: 'hello world',
+                number:0,
+                isTrue: false,
+                techs:[],
+                sex:'女'
+            }
+        })
+    </script>
+</body>
+</html>

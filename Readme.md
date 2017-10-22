@@ -54,4 +54,16 @@ https://github.com/yui/yui3/blob/master/src/cssreset/css/cssreset.css
     iPhone 6 Plus 414*736
 ```
 
+## Vue
+
+- cnpm install -g live-server
+- vue指令: v-text,v-html,v-model,v-on,v-bind,v-pre,v-once,v-if,v-for
+- vue全局API：
+
+
+## vue-cli
+
+- npm config list
+- cnpm
+
 
