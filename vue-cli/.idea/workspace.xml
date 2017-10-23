@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="959ba0cf-3174-4e2b-bad0-63abce85cd66" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ios/01加法计算器" afterPath="$PROJECT_DIR$/../ios/01加法计算器" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vuextest/config/index.js" afterPath="$PROJECT_DIR$/vuextest/config/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vuextest/src/App.vue" afterPath="$PROJECT_DIR$/vuextest/src/App.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vuextest/src/components/Count.vue" afterPath="$PROJECT_DIR$/vuextest/src/components/Count.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vuextest/src/router/index.js" afterPath="$PROJECT_DIR$/vuextest/src/router/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vuextest/src/vuex/store.js" afterPath="$PROJECT_DIR$/vuextest/src/vuex/store.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="store.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vuextest/src/vuex/store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="160">
+              <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -34,13 +30,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Count.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Count.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vuextest/src/components/Count.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="377">
+              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
               <folding>
                 <element signature="e#204#237#0" expanded="true" />
+                <marker date="1508802305000" expanded="true" signature="642:764" ph="..." />
               </folding>
             </state>
           </provider>
@@ -92,8 +89,8 @@
         <option value="$PROJECT_DIR$/vuextest/src/router/index.js" />
         <option value="$PROJECT_DIR$/vuextest/src/App.vue" />
         <option value="$PROJECT_DIR$/vuextest/config/index.js" />
-        <option value="$PROJECT_DIR$/vuextest/src/vuex/store.js" />
         <option value="$PROJECT_DIR$/vuextest/src/components/Count.vue" />
+        <option value="$PROJECT_DIR$/vuextest/src/vuex/store.js" />
       </list>
     </option>
   </component>
@@ -224,12 +221,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508763884152</updated>
-      <workItem from="1508763889778" duration="5981000" />
+      <workItem from="1508763889778" duration="6194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5992000" />
+    <option name="totallyTimeSpent" value="6205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="41" width="1225" height="737" extended-state="0" />
@@ -432,16 +429,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vuextest/src/vuex/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vuextest/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -452,10 +439,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vuextest/src/components/Count.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        <state relative-caret-position="377">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
           <folding>
             <element signature="e#204#237#0" expanded="true" />
+            <marker date="1508802305000" expanded="true" signature="642:764" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vuextest/src/vuex/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>

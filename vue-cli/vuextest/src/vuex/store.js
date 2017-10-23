@@ -8,7 +8,7 @@ const state={
 
 const mutations={
   add(state){
-    state.count++;
+    state.count=state.count+10;
   },
   minus(state){
     state.count--;
@@ -17,7 +17,7 @@ const mutations={
 
 const getters={
   count:function (state) {
-    return count=count+100;
+    return state.count=state.count+10;
   }
 }
 
