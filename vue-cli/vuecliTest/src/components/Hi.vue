@@ -12,6 +12,14 @@
       return {
         msg:'my name is Hi'
       }
+    },
+    beforeRouteEnter:function (to, from, next) {
+      console.log("beforeRouteEnter Hi")
+      next()
+    },
+    beforeRouteLeave:function (to,from,next) {
+      console.log("beforeRouteLeave Hi")
+      next()
     }
   }
 </script>

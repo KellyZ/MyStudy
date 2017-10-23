@@ -1,8 +1,8 @@
 {
-  "name": "vueclitest",
+  "name": "vuextest",
   "version": "1.0.0",
-  "description": "vue cli test",
-  "author": "kelly.zhang <work2012kk@gmail.com>",
+  "description": "A Vue.js project",
+  "author": "kelly",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
