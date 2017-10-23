@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <hr>
+
+    <router-link :to="{name:'Home'}">Home</router-link>
+    <router-link :to="{name:'Count'}">vuex count</router-link>
+
     <router-view/>
   </div>
 </template>

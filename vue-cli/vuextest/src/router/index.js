@@ -9,11 +9,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
+      name: 'Home',
       component: HelloWorld
     },
     {
       path:'/count',
+      name: 'Count',
       component: Count
     }
   ]
