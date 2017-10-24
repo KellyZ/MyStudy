@@ -7,22 +7,32 @@ const state={
 }
 
 const mutations={
-  add(state){
-    state.count=state.count+10;
+  add(state,num){
+    state.count++;
   },
-  minus(state){
+  minus(state,num){
     state.count--;
   }
 }
 
-const getters={
-  count:function (state) {
-    return state.count=state.count+10;
+// const getters={
+//   count:function (state) {
+//     return state.count=state.count+10;
+//   }
+// }
+
+const actions={
+  addAction(context){
+    context.commit("add");
+  },
+  minusAction(context){
+    context.commit("minus");
   }
 }
 
 export default new Vuex.Store({
   state,
   mutations,
-  getters
+  // getters,
+  actions
 })

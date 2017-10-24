@@ -3,15 +3,18 @@
     <h2>{{msg}}</h2>
     <hr>
     <h3>{{count}} </h3>
-    <button @click="add">Add</button>
-    <button @click="$store.commit('minus')">minus</button>
+    <button @click="add(10)">Add</button>
+    <button @click="$store.commit('minus',10)">minus</button>
+
+    <button @click="addAction">AddAction</button>
+    <button @click="minusAction">minusAction</button>
 
   </div>
 </template>
 
 <script>
   import store from '@/vuex/store';
-  import { mapState,mapMutations,mapGetters } from 'vuex'
+  import { mapState,mapMutations,mapActions } from 'vuex'
   export default {
     data() {
       return {
@@ -44,10 +47,12 @@
 //      count(){
 //        return this.$store.getters.count;
 //      }
-      ...mapGetters(['count'])
     },
 
-    methods:mapMutations(['add','minus']),
+    methods:{
+      ...mapMutations(['add','minus']),
+      ...mapActions(['addAction','minusAction'])
+    },
     store
   }
 </script>
