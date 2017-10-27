@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script type="text/javascript" src="./js/react.js"></script>
+    <script type="text/javascript" src="./js/react-dom.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/babel-core/5.8.38/browser.js"></script>
+    <script type="text/babel">
+        let HelloBox = React.createClass({
+            getInitialState:function () {
+                return {
+                    username:'',
+                    gender:'man',
+                    ischecked:true
+                }
+            },
+            handleChange:function (name,event) {
+                var newstate = {}
+                newstate[name]=(name=='ischecked'?event.target.checked:event.target.value)
+                this.setState(newstate)
+                console.log(newstate)
+            },
+            submitHandler:function (e) {
+              e.preventDefault();
+              var is = (this.state.ischecked?'是':'不是');
+              var gender = (this.state.gender=='man'?'帅哥':'美女');
+              alert(this.state.username+is+gender);
+            },
+            render:function () {
+                return (
+                    <div>
+                        <form onSubmit={this.submitHandler}>
+                            <label htmlFor="username">姓名:</label>
+                            <input type="text" name="username" id="username" defaultValue={this.state.username} onChange={this.handleChange.bind(this,'username')}  />
+                            <br/>
+                            <label htmlFor="checkbox">是或者否：</label>
+                            <input type="checkbox" name="ischecked" id="ischecked" checked={this.state.ischecked} onChange={this.handleChange.bind(this,'ischecked')} />
+                            <br/>
+                            <label htmlFor="gender">性别：</label>
+                            <select name="gender" id="gender" defaultValue={this.state.gender} onChange={this.handleChange.bind(this,'gender')} >
+                                <option value="man">男</option>
+                                <option value="woman">女</option>
+                            </select>
+                            <br/>
+                            <button type="submit">submit</button>
+                        </form>
+                    </div>
+                )
+            }
+        })
+
+        ReactDOM.render(
+            <HelloBox /> ,
+            document.getElementById('container')
+        );
+    </script>
+</body>
+</html>
