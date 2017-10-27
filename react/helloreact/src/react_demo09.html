@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this.props.children</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script type="text/javascript" src="./js/react.js"></script>
+    <script type="text/javascript" src="./js/react-dom.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/babel-core/5.8.38/browser.js"></script>
+    <script type="text/babel">
+        let NotesList = React.createClass({
+            render:function () {
+                return (
+                    <div>
+                        <ol>
+                            {React.Children.map(this.props.children,function (child) {
+                                return (
+                                    <li>
+                                        {child}
+                                    </li>
+                                )
+                            })}
+                        </ol>
+                    </div>
+                )
+            }
+        })
+
+        ReactDOM.render(
+            <NotesList>
+                <span>Kelly</span>
+                <span>Java</span>
+            </NotesList> ,
+            document.getElementById('container')
+        );
+    </script>
+</body>
+</html>
