@@ -67,3 +67,46 @@ https://github.com/yui/yui3/blob/master/src/cssreset/css/cssreset.css
 - cnpm
 
 
+## webpack
+
+
+
+## 机器学习
+
+ - Python语言机器
+ 	* 数据基本类型，基本操作：数值，字符串，加减乘除，取余等等
+ 	* 数据语句表达式：条件(if,switch)，循环
+ 	* 函数式编程：函数定义，传参，返回值
+ 	* 面向对象编程：对象定义
+ 	* 内置函数和对象
+ 	
+ - 机器学习基础
+    * 基础概念
+    * 训练数据如何来？如何实用？（数值和文字）
+    * 学习环境？
+    
+ - Python科学计算
+    * 开发工具iPython，Anaconda
+    * 软件包：numpy,pandas,matplotlib,,scikit-learn
+ 
+ - 实践基础算法
+    * k-均值聚类
+    * 朴素贝叶斯
+    * 决策树
+    * 线性回归
+    * logistic回归
+    * 支持向量机
+    * 降维算法
+    * 随机森林
+    
+ - 深度学习实践
+    * Theano
+    * Caffe
+    * 
+    
+ - 理论进阶
+    * 线性代数
+    * 离散数学
+    * 概率论
+    * 算法
+    * 读英文论文博客
