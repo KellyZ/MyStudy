@@ -74,7 +74,7 @@ https://github.com/yui/yui3/blob/master/src/cssreset/css/cssreset.css
 ## 机器学习
 
  - Python语言机器
- 	* 数据基本类型，基本操作：数值，字符串，加减乘除，取余等等
+ 	* 数据基本类型，基本操作：数值，字符串，数组集合，加减乘除，取余等等
  	* 数据语句表达式：条件(if,switch)，循环
  	* 函数式编程：函数定义，传参，返回值
  	* 面向对象编程：对象定义
@@ -102,7 +102,10 @@ https://github.com/yui/yui3/blob/master/src/cssreset/css/cssreset.css
  - 深度学习实践
     * Theano
     * Caffe
-    * 
+    * CNN
+    * RNN
+    * LSTM
+    * 可视化Tensorboard
     
  - 理论进阶
     * 线性代数
