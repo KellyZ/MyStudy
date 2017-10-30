@@ -79,6 +79,8 @@ https://github.com/yui/yui3/blob/master/src/cssreset/css/cssreset.css
  	* 函数式编程：函数定义，传参，返回值
  	* 面向对象编程：对象定义
  	* 内置函数和对象
+ 	* 高级特性：切片，迭代，生成器，高阶函数
+ 	* import
  	
  - 机器学习基础
     * 基础概念
