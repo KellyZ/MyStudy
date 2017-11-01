@@ -70,6 +70,12 @@ https://github.com/yui/yui3/blob/master/src/cssreset/css/cssreset.css
 ## webpack
 
 
+## webstorm
+- keymap: vertical split/horizontal split/global search
+- typescript plugin
+- emmet (ul>li*10>lorem5)
+- format/move up down/next tab
+
 
 ## 机器学习
 
