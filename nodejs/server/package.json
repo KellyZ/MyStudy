@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/.bin/nodemon src/app.js",
+    "start": "node_modules/.bin/nodemon src/app.js --exec  \"npm run lint && node\"",
     "lint": "node_modules/.bin/eslint **/*.js"
   },
   "author": "",
@@ -18,7 +18,8 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "joi": "^13.0.1",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "sqlite3": "^3.1.13"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -26,6 +27,6 @@
     "express": "^4.16.2",
     "morgan": "^1.9.0",
     "sequelize": "^4.20.3",
-    "sqlite3": "^3.1.13"
+    "sqlite3": "^3.1.8"
   }
 }

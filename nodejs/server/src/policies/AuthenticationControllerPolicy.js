@@ -1,9 +1,7 @@
 const Joi = require('joi')
 
-
-
 module.exports = {
-  register(req, res, next) {
+  register (req, res, next) {
     const schema = {
       email: Joi.string().email(),
       password: Joi.string().regex(
@@ -11,10 +9,7 @@ module.exports = {
       )
     }
 
-    const {
-      error,
-      value
-    } = Joi.validate(req.body, schema)
+    const {error} = Joi.validate(req.body, schema)
 
     if (error) {
       switch (error.details[0].context.key) {
@@ -26,6 +21,11 @@ module.exports = {
         case 'password':
           res.status(400).send({
             error: `The password provided fail`
+          })
+          break
+        default:
+          res.status(400).send({
+            error: 'Invalid register information'
           })
           break
       }
