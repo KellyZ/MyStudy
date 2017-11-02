@@ -32,5 +32,8 @@ module.exports = {
     } else {
       next()
     }
+  },
+  login (req, res, next) {
+    next()
   }
 }

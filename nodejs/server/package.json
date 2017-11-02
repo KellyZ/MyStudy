@@ -22,9 +22,12 @@
     "sqlite3": "^3.1.13"
   },
   "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
     "morgan": "^1.9.0",
     "sequelize": "^4.20.3",
     "sqlite3": "^3.1.8"
