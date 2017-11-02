@@ -1,22 +1,30 @@
 <template>
-  <div>
-    <h1>Register</h1>
-    <input 
-      type="email" 
-      name="email"
-      v-model="email"
-      placeholder="email" />
-    <br>
-    <input 
-      type="password" 
-      name="password"
-      v-model="password"
-      placeholder="password" />
-    <br>
-    <div v-text="error"></div>
-    <br>
-    <button @click="register">Register</button>
-  </div>
+  <v-layout column>
+    <v-flex xs6 offset-xs3>
+      <div class='white elevation-2'>
+        <v-toolbar flat dense class='cyan'>
+            <v-toolbar-title>Register</v-toolbar-title>
+        </v-toolbar>
+        <div class="pl-4 pr-4 pt-2 pb-2">
+          <v-text-field
+              name="email"
+              label="email"
+              v-model="email"
+            ></v-text-field>
+          <br>
+          <v-text-field
+              name="password"
+              label="password"
+              v-model="password"
+            ></v-text-field>
+          <br>
+          <div class="error" v-text="error"></div>
+          <br>
+          <v-btn class="cyan" @click="register">Register</v-btn>
+        </div>
+      </div>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
@@ -32,7 +40,7 @@ export default {
   },
   watch: {
     email (value) {
-      console.log('email has changed', value)
+      // console.log('email has changed', value)
     }
   },
   methods: {
@@ -47,12 +55,12 @@ export default {
         this.error = error.response.body.error
       }
     }
-  },
-  mounted () {
-    setTimeout(() => {
-      this.email = 'hello world'
-    }, 1000)
   }
+  // mounted () {
+  //   setTimeout(() => {
+  //     this.email = 'hello world'
+  //   }, 1000)
+  // }
 }
 </script>
 
