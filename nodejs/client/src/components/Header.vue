@@ -5,8 +5,11 @@
     </v-toolbar-title>
 
     <v-toolbar-items>
-      <v-btn flat>
+      <v-btn flat @click="navigation({name: 'song'})">
         Browser
+      </v-btn>
+      <v-btn flat @click="navigation({name: 'createsong'})">
+        Create Song
       </v-btn>
     </v-toolbar-items>
 
@@ -21,6 +24,10 @@
         v-if="!$store.state.isUserLoggedIn">
         Sign Up
       </v-btn>
+      <v-btn flat dark @click="logout"
+        v-if="$store.state.isUserLoggedIn">
+        Logout
+      </v-btn>
     </v-toolbar-items>
   </v-toolbar>
 </template>
@@ -30,6 +37,11 @@ export default {
   methods: {
     navigation (route) {
       this.$router.push(route)
+    },
+    logout () {
+      this.$store.dispatch('setToken', null)
+      this.$store.dispatch('setUser', null)
+      this.$router.push({name: 'root'})
     }
   }
 }
