@@ -1,6 +1,7 @@
 <template>
   <v-layout column>
     <v-flex xs6 offset-xs3>
+      <SongSearch />
       <Panel title="Songs">
         <!-- <div slot="content"> -->
           <div v-for="song in songs" :key="song.tile">
@@ -16,10 +17,12 @@
 
 <script>
 import Panel from '@/components/Panel'
+import SongSearch from '@/components/SongSearch'
 import SongsService from '@/services/SongsService'
 export default {
   components: {
-    Panel
+    Panel,
+    SongSearch
   },
   methods: {
     navigation (route) {
@@ -33,6 +36,14 @@ export default {
   },
   async mounted () {
     this.songs = (await SongsService.index()).data
+  },
+  watch: {
+    '$route.query.search': {
+      immediate: true,
+      async handler (value) {
+        this.songs = (await SongsService.index(this.$route.query.search)).data
+      }
+    }
   }
 }
 </script>

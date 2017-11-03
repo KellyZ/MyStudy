@@ -5,7 +5,7 @@
     </v-toolbar-title>
 
     <v-toolbar-items>
-      <v-btn flat @click="navigation({name: 'song'})">
+      <v-btn flat :to="{name: 'song'}">
         Browser
       </v-btn>
       <v-btn flat @click="navigation({name: 'createsong'})">
