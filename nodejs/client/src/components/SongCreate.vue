@@ -8,22 +8,23 @@
             :rules="[requried]"
             name="title"
             label="title"
-            v-model="title"
+            v-model="song.title"
           ></v-text-field>
         <br>
         <v-text-field
             name="artist"
             label="artist"
-            v-model="artist"
+            v-model="song.artist"
           ></v-text-field>
         <br>
         <v-text-field
             name="album"
             label="album"
-            v-model="album"
+            v-model="song.album"
           ></v-text-field>
         <br>
-        <v-btn class="cyan" @click="createSong">Create Song</v-btn>
+        <v-btn class="cyan" @click="createSong" v-if="!this.$store.state.route.params.songID">Create Song</v-btn>
+        <v-btn class="cyan" @click="editSong" v-else>Edit Song</v-btn>
       </Panel>
     </v-flex>
   </v-layout>
@@ -46,13 +47,31 @@ export default {
       requried: (value) => !!value || 'Required.'
     }
   },
+  async mounted () {
+    const songID = this.$store.state.route.params.songID
+    const song = (await SongsService.show(songID)).data
+    console.log(song)
+    this.song = song
+  },
   methods: {
     async createSong () {
       try {
         await SongsService.create({
-          title: this.title,
-          artist: this.artist,
-          album: this.album
+          title: this.song.title,
+          artist: this.song.artist,
+          album: this.song.album
+        })
+        this.$router.push({name: 'song'})
+      } catch (err) {
+        console.log(err)
+      }
+    },
+    async editSong () {
+      try {
+        await SongsService.edit(this.$store.state.route.params.songID, {
+          title: this.song.title,
+          artist: this.song.artist,
+          album: this.song.album
         })
         this.$router.push({name: 'song'})
       } catch (err) {

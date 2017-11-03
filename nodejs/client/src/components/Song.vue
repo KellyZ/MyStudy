@@ -4,9 +4,10 @@
       <Panel title="Songs">
         <!-- <div slot="content"> -->
           <div v-for="song in songs" :key="song.tile">
-            {{song.title}}
-            {{song.artist}}
-            {{song.album}}
+            {{song.title}} - {{song.artist}} - {{song.album}}
+            <v-btn flat @click="navigation({name: 'editsong', params:{songID:song.id}})">
+              Edit
+            </v-btn>
           </div>
       </Panel>
     </v-flex>
@@ -19,6 +20,11 @@ import SongsService from '@/services/SongsService'
 export default {
   components: {
     Panel
+  },
+  methods: {
+    navigation (route) {
+      this.$router.push(route)
+    }
   },
   data () {
     return {

@@ -34,6 +34,11 @@ export default new Router({
       path: '/song/create',
       name: 'createsong',
       component: CreateSong
+    },
+    {
+      path: '/song/edit/:songID',
+      name: 'editsong',
+      component: CreateSong
     }
   ]
 })

@@ -6,6 +6,12 @@ export default {
   },
   create (song) {
     return Api().post('songs', song)
+  },
+  show (songID) {
+    return Api().get('songs/' + songID)
+  },
+  edit (songID, song) {
+    return Api().post('song/update/' + songID, song)
   }
 }
 

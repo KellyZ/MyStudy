@@ -22,5 +22,34 @@ module.exports = {
         error: `crate song error ${err}`
       })
     }
+  },
+  async show (req, res) {
+    try {
+      // const song = await Song.findOne({
+      //   where: {
+      //     id: req.params.songID
+      //   }
+      // })
+      const song = await Song.findById(req.params.songID)
+      res.send(song)
+    } catch (err) {
+      res.status(400).send({
+        error: `get song error ${err}`
+      })
+    }
+  },
+  async update (req, res) {
+    try {
+      const song = await Song.update(req.body, {
+        where: {
+          id: req.params.songID
+        }
+      })
+      res.send(song)
+    } catch (err) {
+      res.status(400).send({
+        error: `update song error ${err}`
+      })
+    }
   }
 }
