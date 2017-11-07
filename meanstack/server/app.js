@@ -8,6 +8,7 @@ const mongoose = require('mongoose')
 const users = require('./routes/users')
 const dbconfig = require('./config/dbconfig')
 
+
 mongoose.connect(dbconfig.database, dbconfig.options)
 mongoose.connection.on('connected', () => {
   console.log('Conected to database ' + dbconfig.database)
@@ -21,6 +22,11 @@ const app = express()
 app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyparser.json())
+
+app.use(passport.initialize())
+app.use(passport.session())
+
+require('./config/passport')(passport)
 
 app.use('/users', users)
 
