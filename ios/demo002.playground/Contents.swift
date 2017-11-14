@@ -38,5 +38,54 @@ gf.0
 gf.1
 
 
+var students = [12,34,23,45]
+students[0]
+students.append(18)
+students.insert(89, at: 0)
+
+students.isEmpty
+
+var erwei = Array<Array<Int>>()
+
+var myDic = Dictionary<String,String>()
+
+myDic["kelly"]="man"
+
+myDic
+
+struct StudentStruct {
+    var name: String
+    var age: Int
+    var score: Int
+}
+
+var kelly = StudentStruct(name:"kelly",age:18,score:100)
+
+kelly
+
+kelly.name = "panda"
+kelly.name
+
+
+2...4
+
+2..<4
+
+if 1==2{
+    print("yes")
+}else{
+    print("no")
+}
+
+func hello(param:Int, param2:String) -> String {
+    
+    return ""
+}
+
+
+
+
+
+
 
 
