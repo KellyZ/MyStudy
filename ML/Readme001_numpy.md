@@ -40,4 +40,41 @@
    - all, any, apply_along_axis, argmax, argmin, argsort, average, bincount, ceil, clip, conj, corrcoef, cov, cross, cumprod, cumsum, diff, dot, floor, inner, inv, lexsort, max, maximum, mean, median, min, minimum, nonzero, outer, prod, re, round, sort, std, sum, trace, transpose, var, vdot, vectorize, where
 7. 索引，切片和迭代
 
-   - 
+   - 多维数组索引；
+   - flat属性；
+8. 更改数组的形状：
+
+   - revel： flattened，返回修改后的数组；
+   - reshape
+   - .T 转置（tanspose)
+   - resize： 改变数组本身
+   - 合并与分割
+9. 深度copy和浅copy
+   
+   - 简单赋值不会创建数组对象或其数据的拷贝，如b=a
+   - Python将可变对象作为引用传递，因此函数调用不会复制
+   - 视图： 共享数据
+   - 对数组进行切片返回一个视图
+   - copy方法生成数组及其数据的完整拷贝
+
+10. 汇总
+
+```
+数组创建
+arange, array, copy, empty, empty_like, eye, fromfile, fromfunction, identity, linspace, logspace, mgrid, ogrid, ones, ones_like, r, zeros, zeros_like
+转换
+ndarray.astype，atleast_1d，atleast_2d，atleast_3d，mat
+修改
+array_split, column_stack, concatenate, diagonal, dsplit, dstack, hsplit, hstack, ndarray.item, newaxis, ravel, repeat, reshape, resize, squeeze, swapaxes, take, transpose, vsplit, vstack
+判别
+all，any，nonzero，where
+索引
+argmax, argmin, argsort, max, min, ptp, searchsorted, sort
+操作
+choose, compress, cumprod, cumsum, inner, ndarray.fill, imag, prod, put, putmask, real, sum
+基本统计
+cov，mean，std，var
+基本线性代数
+cross，dot，outer，linalg.svd，vdot
+```
+
